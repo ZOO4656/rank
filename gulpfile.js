@@ -13,6 +13,8 @@ require('laravel-elixir-vue');
  |
  */
 
+elixir.config.sourcemaps = false;
+
 elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
