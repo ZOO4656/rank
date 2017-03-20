@@ -11,8 +11,20 @@
 |
 */
 
+// Home
 Route::get('/', 'HomeController@index');
 
+// Auth
 Auth::routes();
 
+// User
 Route::get('/mypage', 'UserController@index');
+
+// Ranking
+Route::resource(
+    'ranking',
+    'RankingController',
+    [
+        'only' => ['index', 'create'],
+    ]
+);

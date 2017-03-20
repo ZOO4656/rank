@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ranking extends Model
 {
-    //
+    const MOVIE = 'movie';
 }
