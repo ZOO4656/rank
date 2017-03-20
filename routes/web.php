@@ -28,3 +28,14 @@ Route::resource(
         'only' => ['index', 'create', 'show', 'store'],
     ]
 );
+
+Route::get('/ranking/{id}/post', 'PostController@create');
+
+// Post
+Route::resource(
+    'post',
+    'PostController',
+    [
+        'only' => ['create', 'store'],
+    ]
+);
