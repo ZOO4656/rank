@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\RankingStoreRequest;
 use App\Models\Ranking;
 
 class RankingController extends Controller
@@ -12,7 +13,13 @@ class RankingController extends Controller
         return view('ranking.create')
             ->with([
                 'type' => Ranking::MOVIE,
-                'row' => new Ranking,
             ]);
+    }
+
+    public function store(RankingStoreRequest $request)
+    {
+        $input = $request->only(['type', 'title']);
+        Ranking::create($input);
+        return redirect('/');
     }
 }

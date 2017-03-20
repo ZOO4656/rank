@@ -25,6 +25,6 @@ Route::resource(
     'ranking',
     'RankingController',
     [
-        'only' => ['index', 'create'],
+        'only' => ['index', 'create', 'store'],
     ]
 );
