@@ -8,6 +8,15 @@ use App\Models\Ranking;
 
 class RankingController extends Controller
 {
+    public function show($id)
+    {
+        $ranking = Ranking::find($id);
+        return view('ranking.show')
+            ->with([
+                'ranking' => $ranking,
+            ]);
+    }
+
     public function create()
     {
         return view('ranking.create')
