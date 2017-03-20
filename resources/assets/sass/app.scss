@@ -1,9 +1,11 @@
+// Base
+@import "base/base";
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+// Pages
+@import "pages/pages";
 
-// Variables
-@import "variables";
+// Utils
+@import "utils/utils";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// Components
+@import "components/components";
