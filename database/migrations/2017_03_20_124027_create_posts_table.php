@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->integer('ranking_id')->unsigned();
             $table->string('title');
             $table->string('src');
+            $table->integer('thumbnail_id')->unsigned();
             $table->timestamps();
         });
     }
