@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public $fillable = ['type', 'user_id', 'ranking_id', 'title', 'src', 'thumbnail_id'];
+    const PROVIDER_YOUTUBE = 'youtube';
+    public $fillable = ['type', 'user_id', 'ranking_id', 'title', 'src', 'thumbnail_id', 'provider'];
 
     /**
      * Youtube動画のURLから動画IDを取得

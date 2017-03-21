@@ -59,6 +59,7 @@ class PostController extends Controller
                 'title' => $res->getTitle(),
                 'src' => $post_id,
                 'thumbnail_id' => $thumbnail->id,
+                'provider' => Post::PROVIDER_YOUTUBE,
             ]);
 
         });

@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('src');
             $table->integer('thumbnail_id')->unsigned();
+            $table->string('provider')->default('original');
             $table->timestamps();
         });
     }
