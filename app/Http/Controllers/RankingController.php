@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\RankingStoreRequest;
 use App\Models\Ranking;
+use App\Models\Post;
 
 class RankingController extends Controller
 {
@@ -15,10 +16,10 @@ class RankingController extends Controller
 
     public function show($id)
     {
-        $ranking = Ranking::find($id);
         return view('ranking.show')
             ->with([
-                'ranking' => $ranking,
+                'ranking' => Ranking::find($id),
+                'posts' => Post::where('ranking_id', $id)->get(),
             ]);
     }
 
